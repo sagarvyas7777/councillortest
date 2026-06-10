@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Request a Lawn Sign — Harinder Kumar for Councillor</title>
+<meta name="description" content="Show your support by hosting a lawn sign. Request one and we'll deliver and install it for free." />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <a href="index.html" class="logo">Harinder <span>Kumar</span></a>
+    <button class="menu-toggle" aria-label="Menu">☰</button>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <!-- <a href="platform.html">Platform</a> -->
+      <a href="volunteer.html">Volunteer</a>
+      <a href="lawn-sign.html">Lawn Sign</a>
+      <a href="contact.html">Contact</a>
+      <a href="volunteer.html" class="cta">Join Us</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="section container" style="max-width:780px;">
+  <span class="eyebrow">Lawn Signs</span>
+  <h1>Put your support on display.</h1>
+  <p class="muted mt-3">Lawn signs work — they tell neighbours that someone they trust is voting for Harinder. Request one below and a volunteer will drop it off (and install it for you, if you'd like).</p>
+
+  <div class="form-wrap mt-4" style="max-width:none;">
+    <div class="form-success">Sign on the way! A volunteer will reach out to confirm a delivery window in the next few days.</div>
+      <form id="lawn-form" data-storage="lawn-sign-requests" action="https://formsubmit.co/ajax/harry4w11@gmail.com" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="Lawn sign request" />
+        <input type="hidden" name="_captcha" value="false" />
+      <div class="form-row"><label>Full name <span class="req">*</span></label><input type="text" name="fullName" required maxlength="120" /><div class="form-error"></div></div>
+      <div class="form-row"><label>Email <span class="req">*</span></label><input type="email" name="email" required maxlength="200" /><div class="form-error"></div></div>
+      <div class="form-row"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required maxlength="25" /><div class="form-error"></div></div>
+      <div class="form-row"><label>Street address <span class="req">*</span></label><input type="text" name="address" required maxlength="200" /><div class="form-error"></div></div>
+      <div class="form-row"><label>City <span class="req">*</span></label><input type="text" name="city" required maxlength="60" /><div class="form-error"></div></div>
+      <div class="form-row"><label>Postal code <span class="req">*</span></label><input type="text" name="postalCode" required maxlength="10" /><div class="form-error"></div></div>
+      <div class="form-row">
+        <label>Sign size <span class="req">*</span></label>
+        <div class="options">
+          <label><input type="radio" name="signSize" value="Standard" required /> Standard lawn sign</label>
+          <label><input type="radio" name="signSize" value="Large" /> Large lawn sign (corner / high-traffic lot)</label>
+        </div>
+        <div class="form-error"></div>
+      </div>
+      <div class="form-row">
+        <label>Installation help? <span class="req">*</span></label>
+        <div class="options">
+          <label><input type="radio" name="installation" value="Yes" required /> Yes, please install it for me</label>
+          <label><input type="radio" name="installation" value="No" /> No, I'll install it myself</label>
+        </div>
+        <div class="form-error"></div>
+      </div>
+      <div class="form-row"><label>Delivery notes (gate code, best time, etc.)</label><textarea name="notes" maxlength="600"></textarea></div>
+      <button type="submit" class="btn btn-primary">Request my lawn sign</button>
+    </form>
+  </div>
+</section>
+
+</main>
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo" style="color:var(--cream)">Harinder <span>Kumar</span></div>
+        <p class="mt-2" style="opacity:.8; font-size:.9rem; max-width:30ch;">A community-first campaign for City Council. Authorized by the  Harinder Kumar.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="about.html">About</a></li>
+          <!-- <li><a href="platform.html">Platform</a></li> -->
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get involved</h4>
+        <ul>
+          <li><a href="volunteer.html">Volunteer</a></li>
+          <li><a href="lawn-sign.html">Lawn sign</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026  Harinder Kumar</div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>

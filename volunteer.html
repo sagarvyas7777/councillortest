@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Volunteer — Harinder Kumar for Councillor</title>
+    <meta
+      name="description"
+      content="Sign up to volunteer with the Harinder Kumar campaign — door-knocking, phone banking, events, and more."
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="index.html" class="logo">Harinder <span>Kumar</span></a>
+        <button class="menu-toggle" aria-label="Menu">☰</button>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <!-- <a href="platform.html">Platform</a> -->
+          <a href="volunteer.html">Volunteer</a>
+          <a href="lawn-sign.html">Lawn Sign</a>
+          <a href="contact.html">Contact</a>
+          <a href="volunteer.html" class="cta">Join Us</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="section container">
+        <div class="split">
+          <div>
+            <span class="eyebrow">Volunteer</span>
+            <h1>Help us win this thing.</h1>
+            <p class="muted mt-3">
+              This campaign is powered by neighbours. Tell us a bit about you
+              and how you'd like to pitch in — we'll be in touch within a couple
+              of days.
+            </p>
+            <div class="cards mt-4" style="grid-template-columns: 1fr 1fr">
+              <div class="card">
+                <h3>A real team</h3>
+                <p>Join a crew of neighbours who actually like each other.</p>
+              </div>
+              <div class="card">
+                <h3>Training included</h3>
+                <p>First time? We'll teach you everything you need.</p>
+              </div>
+              <div class="card">
+                <h3>Flexible hours</h3>
+                <p>Give an hour or every weekend. Both matter.</p>
+              </div>
+              <div class="card">
+                <h3>Make it count</h3>
+                <p>Local elections turn on conversations. Yours included.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-wrap">
+            <div class="form-success">
+              Thanks for stepping up! We've received your info and a campaign
+              organizer will be in touch within 48 hours.
+            </div>
+            <form
+              id="volunteer-form"
+              data-storage="volunteer-signups"
+              action="https://formsubmit.co/ajax/harry4w11@gmail.com"
+              method="POST"
+              novalidate
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="New volunteer signup"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <div class="form-row">
+                <label>First name <span class="req">*</span></label
+                ><input type="text" name="firstName" required maxlength="60" />
+                <div class="form-error"></div>
+              </div>
+              <div class="form-row">
+                <label>Last name <span class="req">*</span></label
+                ><input type="text" name="lastName" required maxlength="60" />
+                <div class="form-error"></div>
+              </div>
+              <div class="form-row">
+                <label>Email <span class="req">*</span></label
+                ><input type="email" name="email" required maxlength="200" />
+                <div class="form-error"></div>
+              </div>
+              <div class="form-row">
+                <label>Phone (optional)</label
+                ><input type="tel" name="phone" maxlength="25" />
+                <div class="form-error"></div>
+              </div>
+              <div class="form-row">
+                <label>Postal code <span class="req">*</span></label
+                ><input type="text" name="postalCode" required maxlength="10" />
+                <div class="form-error"></div>
+              </div>
+              <div class="form-row">
+                <label
+                  >How would you like to help? <span class="req">*</span></label
+                >
+                <div class="options">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="interests"
+                      value="Door-knocking"
+                      required
+                    />
+                    Door-knocking</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="interests"
+                      value="Phone banking"
+                    />
+                    Phone banking</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="interests"
+                      value="Event support"
+                    />
+                    Event support</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="interests"
+                      value="Social media"
+                    />
+                    Social media</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="interests"
+                      value="Translating"
+                    />
+                    Translating</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="interests"
+                      value="Driving voters"
+                    />
+                    Driving voters on election day</label
+                  >
+                </div>
+                <div class="form-error"></div>
+              </div>
+              <div class="form-row">
+                <label>When are you usually free?</label>
+                <div class="options">
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="availability"
+                      value="Weekday mornings"
+                    />
+                    Weekday mornings</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="availability"
+                      value="Weekday evenings"
+                    />
+                    Weekday evenings</label
+                  >
+                  <label
+                    ><input
+                      type="checkbox"
+                      name="availability"
+                      value="Weekends"
+                    />
+                    Weekends</label
+                  >
+                </div>
+              </div>
+              <div class="form-row">
+                <label>Anything else we should know?</label
+                ><textarea name="notes" maxlength="1000"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Sign me up</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="logo" style="color: var(--cream)">
+              Harinder <span>Kumar</span>
+            </div>
+            <p
+              class="mt-2"
+              style="opacity: 0.8; font-size: 0.9rem; max-width: 30ch"
+            >
+              A community-first campaign for City Council. Authorized by the
+              Harinder Kumar.
+            </p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="about.html">About</a></li>
+              <!-- <li><a href="platform.html">Platform</a></li> -->
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Get involved</h4>
+            <ul>
+              <li><a href="volunteer.html">Volunteer</a></li>
+              <li><a href="lawn-sign.html">Lawn sign</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">© 2026 Harinder Kumar</div>
+      </div>
+    </footer>
+    <script src="js/main.js"></script>
+  </body>
+</html>
