@@ -1,4 +1,4 @@
-# Harinder Kumar for Councillor — Static Site
+# Harinder Kumar for Councillor — Static Site test
 
 Plain HTML / CSS / JS. **No build step.** Just open `index.html`.
 
