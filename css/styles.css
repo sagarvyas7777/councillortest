@@ -82,14 +82,16 @@ h3 { font-size: 1.3rem; }
 
 /* ===== Buttons ===== */
 .btn {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0.85rem 1.6rem;
   border-radius: 999px;
   font-weight: 500; font-size: 0.95rem;
   cursor: pointer; border: 0;
   transition: opacity .2s, background .2s;
 }
-.btn-primary { background: var(--burgundy); color: var(--cream); }
+.btn-primary { background: var(--burgundy); color: var(--cream); min-width: 300px; }
 .btn-primary:hover { background: var(--burgundy-dark); text-decoration: none; }
 .btn-outline {
   background: transparent; color: var(--burgundy);
@@ -117,7 +119,14 @@ h3 { font-size: 1.3rem; }
 }
 .hero h1 em { color: var(--burgundy); font-style: italic; }
 .hero p.lead { font-size: 1.15rem; color: var(--muted); margin-top: 1.25rem; max-width: 28rem; }
-.hero .cta-row { margin-top: 2rem; display: flex; gap: 0.75rem; flex-wrap: wrap; }
+.hero .cta-row {
+  margin: 2rem auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: fit-content;
+}
 .hero-image {
   aspect-ratio: 4 / 5; border-radius: var(--radius);
   object-fit: cover; box-shadow: 0 20px 50px -20px rgba(91,26,37,0.4);
