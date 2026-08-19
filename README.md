@@ -50,3 +50,8 @@ Forms save to the browser's `localStorage` (keys: `volunteer-signups`,
 `lawn-sign-requests`, `contact-messages`). To wire to a real backend, edit
 `js/main.js` and replace the `localStorage.setItem(...)` block with a `fetch()`
 to your endpoint.
+
+## Analytics
+Vercel Web Analytics is enabled through the static-site script included in each
+HTML page. Deploy the site to Vercel and enable Web Analytics for the project
+to collect traffic data.
