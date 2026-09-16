@@ -25,7 +25,7 @@ lawn-sign.html      ← lawn sign request form
 contact.html        ← contact form
 css/styles.css      ← all styles (edit colors at the top in :root)
 js/main.js          ← form handler + mobile menu
-images/             ← replace candidate.jpg with the real photo
+images/             ← replace candidate.webp with the real photo
 ```
 
 ## Edit the colors
@@ -39,7 +39,7 @@ Open `css/styles.css` and edit the top `:root` block:
 ```
 
 ## Edit the candidate photo
-Replace `images/candidate.jpg` with your own photo (same filename).
+Replace `images/candidate.webp` with your own photo (same filename).
 
 ## Edit text
 Open the relevant `.html` file and edit the text directly. The header and footer
