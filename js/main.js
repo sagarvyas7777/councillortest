@@ -138,7 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Show the lawn sign invitation on the home page.
   const lawnSignModal = document.getElementById('lawn-sign-modal');
-  if (lawnSignModal) {
+  const lawnSignPopupSeen = localStorage.getItem('lawn-sign-popup-seen');
+  if (lawnSignModal && !lawnSignPopupSeen) {
     const closeLawnSignModal = () => {
       lawnSignModal.hidden = true;
       document.body.style.overflow = '';
@@ -152,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (e.key === 'Escape' && !lawnSignModal.hidden) closeLawnSignModal();
     });
     lawnSignModal.hidden = false;
+    localStorage.setItem('lawn-sign-popup-seen', 'true');
     document.body.style.overflow = 'hidden';
   }
 
