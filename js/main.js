@@ -136,6 +136,25 @@ document.addEventListener('DOMContentLoaded', () => {
   createSubmissionPopup();
   // --- end popup helper ---
 
+  // Show the lawn sign invitation on the home page.
+  const lawnSignModal = document.getElementById('lawn-sign-modal');
+  if (lawnSignModal) {
+    const closeLawnSignModal = () => {
+      lawnSignModal.hidden = true;
+      document.body.style.overflow = '';
+    };
+
+    lawnSignModal.querySelector('.lawn-sign-modal__close').addEventListener('click', closeLawnSignModal);
+    lawnSignModal.addEventListener('click', (e) => {
+      if (e.target === lawnSignModal) closeLawnSignModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !lawnSignModal.hidden) closeLawnSignModal();
+    });
+    lawnSignModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+  }
+
 
   // Unified form handler — saves to localStorage and optionally posts (volunteer)
   document.querySelectorAll('form[data-storage]').forEach(form => {

@@ -99,6 +99,32 @@ h3 { font-size: 1.3rem; }
 }
 .btn-outline:hover { background: rgba(91,26,37,0.05); text-decoration: none; }
 
+/* ===== Lawn sign popup ===== */
+.lawn-sign-modal {
+  position: fixed; inset: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.25rem;
+  background: rgba(43,29,23,0.55);
+}
+.lawn-sign-modal[hidden] { display: none; }
+.lawn-sign-modal__content {
+  position: relative; width: min(520px, 100%);
+  padding: 3rem 2rem 2.25rem;
+  background: var(--cream); border: 1px solid var(--border);
+  border-radius: var(--radius); box-shadow: 0 20px 60px rgba(43,29,23,0.25);
+  text-align: center;
+}
+.lawn-sign-modal__content .eyebrow { margin-bottom: 1rem; }
+.lawn-sign-modal__content p { margin: 1rem auto 1.5rem; max-width: 30rem; color: var(--muted); }
+.lawn-sign-modal__content .btn { min-width: min(300px, 100%); }
+.lawn-sign-modal__close {
+  position: absolute; top: 0.75rem; right: 0.9rem;
+  width: 2.25rem; height: 2.25rem;
+  border: 0; background: transparent; color: var(--muted);
+  font-size: 1.75rem; line-height: 1; cursor: pointer;
+}
+.lawn-sign-modal__close:hover { color: var(--text); }
+
 /* ===== Hero ===== */
 .hero { padding: 2rem 0 3rem; }
 .hero-grid {

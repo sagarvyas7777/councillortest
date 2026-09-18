@@ -28,36 +28,15 @@
 <section class="section container" style="max-width:780px;">
   <span class="eyebrow">Lawn Signs</span>
   <h1>Put your support on display.</h1>
-  <p class="muted mt-3">Lawn signs work — they tell neighbours that someone they trust is supporting me. Request one below and a volunteer will drop it off (and install it for you, if you'd like).</p>
+  <p class="muted mt-3">Lawn signs show your neighbours that someone they trust is supporting me. Request one below and a volunteer will arrange delivery.</p>
 
   <div class="form-wrap mt-4" style="max-width:none;">
-    <div class="form-success">Sign on the way! A volunteer will reach out to confirm a delivery window in the next few days.</div>
+    <div class="form-success">Thanks! A volunteer will arrange your lawn sign delivery.</div>
       <form id="lawn-form" data-storage="lawn-sign-requests" action="https://formsubmit.co/ajax/harry4w11@gmail.com" method="POST" novalidate>
         <input type="hidden" name="_subject" value="Lawn sign request" />
         <input type="hidden" name="_captcha" value="false" />
-      <div class="form-row"><label>Full name <span class="req">*</span></label><input type="text" name="fullName" required maxlength="120" /><div class="form-error"></div></div>
-      <div class="form-row"><label>Email <span class="req">*</span></label><input type="email" name="email" required maxlength="200" /><div class="form-error"></div></div>
-      <div class="form-row"><label>Phone <span class="req">*</span></label><input type="tel" name="phone" required maxlength="25" /><div class="form-error"></div></div>
-      <div class="form-row"><label>Street address <span class="req">*</span></label><input type="text" name="address" required maxlength="200" /><div class="form-error"></div></div>
-      <div class="form-row"><label>City <span class="req">*</span></label><input type="text" name="city" required maxlength="60" /><div class="form-error"></div></div>
-      <div class="form-row"><label>Postal code <span class="req">*</span></label><input type="text" name="postalCode" required maxlength="10" /><div class="form-error"></div></div>
-      <div class="form-row">
-        <label>Sign size <span class="req">*</span></label>
-        <div class="options">
-          <label><input type="radio" name="signSize" value="Standard" required /> Standard lawn sign</label>
-          <label><input type="radio" name="signSize" value="Large" /> Large lawn sign (corner / high-traffic lot)</label>
-        </div>
-        <div class="form-error"></div>
-      </div>
-      <div class="form-row">
-        <label>Installation help? <span class="req">*</span></label>
-        <div class="options">
-          <label><input type="radio" name="installation" value="Yes" required /> Yes, please install it for me</label>
-          <label><input type="radio" name="installation" value="No" /> No, I'll install it myself</label>
-        </div>
-        <div class="form-error"></div>
-      </div>
-      <div class="form-row"><label>Delivery notes (gate code, best time, etc.)</label><textarea name="notes" maxlength="600"></textarea></div>
+      <div class="form-row"><label for="lawn-name">Name <span class="req">*</span></label><input id="lawn-name" type="text" name="name" required maxlength="120" autocomplete="name" /><div class="form-error"></div></div>
+      <div class="form-row"><label for="lawn-location">Location <span class="req">*</span></label><input id="lawn-location" type="text" name="location" required maxlength="200" autocomplete="street-address" /><div class="form-error"></div></div>
       <button type="submit" class="btn btn-primary">Request my lawn sign</button>
     </form>
   </div>
