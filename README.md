@@ -25,7 +25,7 @@ lawn-sign.html      ← lawn sign request form
 contact.html        ← contact form
 css/styles.css      ← all styles (edit colors at the top in :root)
 js/main.js          ← form handler + mobile menu
-images/             ← replace candidate.webp with the real photo
+images/             ← images
 ```
 
 ## Edit the colors
