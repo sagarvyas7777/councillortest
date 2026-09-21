@@ -143,7 +143,17 @@ h3 { font-size: 1.3rem; }
   text-transform: uppercase; letter-spacing: 0.15em;
   margin-bottom: 1.25rem;
 }
-.hero h1 em { color: var(--burgundy); font-style: italic; }
+.hero h1 span { color: var(--gold); }
+.hero h1 { display: block; text-align: center; }
+.hero h1 + .eyebrow { margin-top: 1rem; }
+
+.hero h1 + .eyebrow {
+  display: block;
+  width: fit-content;
+  margin: 1rem auto 1.25rem;
+  text-align: center;
+}
+
 .hero p.lead { font-size: 1.15rem; color: var(--muted); margin-top: 1.25rem; max-width: 28rem; }
 .hero .cta-row {
   margin: 2rem auto 0;
