@@ -20,7 +20,6 @@ Then visit http://localhost:8000
 index.html          ← homepage
 about.html
 platform.html
-volunteer.html      ← volunteer signup form
 lawn-sign.html      ← lawn sign request form
 contact.html        ← contact form
 css/styles.css      ← all styles (edit colors at the top in :root)
@@ -46,10 +45,9 @@ Open the relevant `.html` file and edit the text directly. The header and footer
 are inlined in each page — if you change a nav link, update it in every page.
 
 ## Form submissions
-Forms save to the browser's `localStorage` (keys: `volunteer-signups`,
-`lawn-sign-requests`, `contact-messages`). To wire to a real backend, edit
-`js/main.js` and replace the `localStorage.setItem(...)` block with a `fetch()`
-to your endpoint.
+Forms save to the browser's `localStorage` (keys: `lawn-sign-requests`,
+`contact-messages`). To wire to a real backend, edit `js/main.js` and replace
+the `localStorage.setItem(...)` block with a `fetch()` to your endpoint.
 
 ## Analytics
 Vercel Web Analytics is enabled through the static-site script included in each

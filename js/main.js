@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 
-  // Unified form handler — saves to localStorage and optionally posts (volunteer)
+  // Unified form handler — saves to localStorage and optionally posts to external endpoints
   document.querySelectorAll('form[data-storage]').forEach(form => {
     const storageKey = form.dataset.storage;
     const successEl = form.querySelector('.form-success');
@@ -195,8 +195,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
       data._submittedAt = new Date().toISOString();
 
-      // If this form should be sent to an external endpoint (volunteer), post first
-      if ((form.id === 'volunteer-form' || form.id === 'lawn-form' || form.id === 'contact-form') && form.action) {
+      // If this form should be sent to an external endpoint, post first
+      if ((form.id === 'lawn-form' || form.id === 'contact-form') && form.action) {
         try {
           // create a fresh FormData snapshot to send
           const fd = new FormData(form);
