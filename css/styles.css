@@ -105,6 +105,7 @@ h3 { font-size: 1.3rem; }
   display: flex; align-items: center; justify-content: center;
   padding: 1.25rem;
   background: rgba(43,29,23,0.55);
+  animation: lawn-sign-modal-fade-in 600ms ease-out both;
 }
 .lawn-sign-modal[hidden] { display: none; }
 .lawn-sign-modal__content {
@@ -113,7 +114,22 @@ h3 { font-size: 1.3rem; }
   background: var(--cream); border: 1px solid var(--border);
   border-radius: var(--radius); box-shadow: 0 20px 60px rgba(43,29,23,0.25);
   text-align: center;
+  animation: lawn-sign-modal-rise-in 700ms cubic-bezier(0.2, 0.75, 0.3, 1) both;
 }
+@keyframes lawn-sign-modal-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes lawn-sign-modal-rise-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .lawn-sign-modal,
+  .lawn-sign-modal__content { animation: none; }
+}
+.lawn-sign-modal__content h2 span { color: var(--gold); }
+.lawn-sign-modal__content h2 sup { font-size: 0.55em; }
 .lawn-sign-modal__content .eyebrow { margin-bottom: 1rem; }
 .lawn-sign-modal__content p { margin: 1rem auto 1.5rem; max-width: 30rem; color: var(--muted); }
 .lawn-sign-modal__content .btn { min-width: min(300px, 100%); }
@@ -143,8 +159,14 @@ h3 { font-size: 1.3rem; }
   text-transform: uppercase; letter-spacing: 0.15em;
   margin-bottom: 1.25rem;
 }
-.hero h1 span { color: var(--gold); }
+.hero h1 span { color: var(--gold); font-size: 0.75em; }
 .hero h1 { display: block; text-align: center; }
+.hero-vote-for {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 1.75rem;
+  text-align: center;
+}
 .hero h1 + .eyebrow { margin-top: 1rem; }
 
 .hero h1 + .eyebrow {
@@ -152,6 +174,7 @@ h3 { font-size: 1.3rem; }
   width: fit-content;
   margin: 1rem auto 1.25rem;
   text-align: center;
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
 }
 
 .hero p.lead { font-size: 1.15rem; color: var(--muted); margin-top: 1.25rem; max-width: 28rem; }
@@ -167,6 +190,12 @@ h3 { font-size: 1.3rem; }
   aspect-ratio: 4 / 5; border-radius: var(--radius);
   object-fit: cover; box-shadow: 0 20px 50px -20px rgba(91,26,37,0.4);
 }
+.hero-education {
+  grid-column: 2;
+  justify-self: end;
+  text-align: right;
+}
+@media (max-width: 800px) { .hero-education { grid-column: 1; } }
 
 /* ===== Sections ===== */
 .section { padding: 2rem 0 3rem 0; }

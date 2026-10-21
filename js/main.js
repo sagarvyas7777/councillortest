@@ -136,10 +136,11 @@ document.addEventListener('DOMContentLoaded', () => {
   createSubmissionPopup();
   // --- end popup helper ---
 
-  // Show the lawn sign invitation on the home page.
+  // Show the lawn sign invitation when visitors reach the third commitment.
   const lawnSignModal = document.getElementById('lawn-sign-modal');
-  const lawnSignPopupSeen = localStorage.getItem('lawn-sign-popup-seen');
-  if (lawnSignModal && !lawnSignPopupSeen) {
+  const lawnSignPopupSeen = localStorage.getItem('election-popup-seen');
+  const thirdCommitment = document.querySelector('#commitments .card:nth-child(5)');
+  if (lawnSignModal && thirdCommitment && !lawnSignPopupSeen) {
     const closeLawnSignModal = () => {
       lawnSignModal.hidden = true;
       document.body.style.overflow = '';
@@ -152,9 +153,16 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && !lawnSignModal.hidden) closeLawnSignModal();
     });
-    lawnSignModal.hidden = false;
-    localStorage.setItem('lawn-sign-popup-seen', 'true');
-    document.body.style.overflow = 'hidden';
+
+    const commitmentObserver = new IntersectionObserver((entries) => {
+      if (!entries.some((entry) => entry.isIntersecting)) return;
+
+      lawnSignModal.hidden = false;
+      localStorage.setItem('election-popup-seen', 'true');
+      document.body.style.overflow = 'hidden';
+      commitmentObserver.disconnect();
+    });
+    commitmentObserver.observe(thirdCommitment);
   }
 
 
